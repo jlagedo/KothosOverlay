@@ -16,45 +16,58 @@
         <TextBox x:Name="tbLog" Margin="10,377,838,10" TextWrapping="Wrap" VerticalScrollBarVisibility="Visible" Text = "{Binding MessageLog, Mode=TwoWay}" FontFamily="Dubai Medium" />-->
         <DataGrid x:Name="dgCombatData" AutoGenerateColumns="False" ItemsSource="{Binding Players}" 
                   FontFamily="./resources/#Roboto" Foreground="Black" BorderBrush="{x:Null}" 
-                  HeadersVisibility="Column" AreRowDetailsFrozen="True" IsReadOnly="True" 
-                  FontSize="11" >
+                  HeadersVisibility="Column" AreRowDetailsFrozen="True" IsReadOnly="True"  RowBackground="Transparent"
+                  FontSize="11" GridLinesVisibility="None" SelectionMode="Single" >
             <DataGrid.Background>
                 <SolidColorBrush Opacity="0.2" Color="Black"/>
             </DataGrid.Background>
             <DataGrid.Columns>
-                <DataGridTextColumn Header="Name" Width="200" Binding="{Binding Name}"/>
-                <DataGridTextColumn Header="D%" Width="40" Binding="{Binding DPSEnc}">
+                <DataGridTextColumn Header="Name" Width="200" Binding="{Binding Name}" Foreground="White">
+                    <DataGridTextColumn.ElementStyle>
+                        <Style TargetType="{x:Type TextBlock}">
+                            <Setter Property="Margin" Value="4"/>
+                            
+                        </Style>
+                    </DataGridTextColumn.ElementStyle>                    
+                    
+                </DataGridTextColumn>
+                <DataGridTextColumn Header="D%" Width="40" Binding="{Binding DPSEnc}" Foreground="White">
                     <DataGridTextColumn.ElementStyle>
                         <Style TargetType="{x:Type TextBlock}">
                             <Setter Property="HorizontalAlignment" Value="Right" />
+                            <Setter Property="Margin" Value="4"/>
                         </Style>
                     </DataGridTextColumn.ElementStyle>
                 </DataGridTextColumn>
-                <DataGridTextColumn Header="DPS" Width="100" Binding="{Binding DPS}" >
+                <DataGridTextColumn Header="DPS" Width="100" Binding="{Binding DPS}" Foreground="White">
                     <DataGridTextColumn.ElementStyle>
                         <Style TargetType="{x:Type TextBlock}">
                             <Setter Property="HorizontalAlignment" Value="Right" />
+                            <Setter Property="Margin" Value="4"/>
                         </Style>
                     </DataGridTextColumn.ElementStyle>
                 </DataGridTextColumn>
-                <DataGridTextColumn Header="CH" Width="40" Binding="{Binding CriticalEnc}" >
+                <DataGridTextColumn Header="CH" Width="40" Binding="{Binding CriticalEnc}" Foreground="White">
                     <DataGridTextColumn.ElementStyle>
                         <Style TargetType="{x:Type TextBlock}">
                             <Setter Property="HorizontalAlignment" Value="Right" />
+                            <Setter Property="Margin" Value="4"/>
                         </Style>
                     </DataGridTextColumn.ElementStyle>
                 </DataGridTextColumn>
-                <DataGridTextColumn Header="DH" Width="40" Binding="{Binding DirectEnc}" >
+                <DataGridTextColumn Header="DH" Width="40" Binding="{Binding DirectEnc}" Foreground="White" >
                     <DataGridTextColumn.ElementStyle>
                         <Style TargetType="{x:Type TextBlock}">
                             <Setter Property="HorizontalAlignment" Value="Right" />
+                            <Setter Property="Margin" Value="4"/>
                         </Style>
                     </DataGridTextColumn.ElementStyle>
                 </DataGridTextColumn>
-                <DataGridTextColumn Header="!!!" Width="40" Binding="{Binding DirectCritEnc}" >
+                <DataGridTextColumn Header="!!!" Width="40" Binding="{Binding DirectCritEnc}" Foreground="White">
                     <DataGridTextColumn.ElementStyle>
                         <Style TargetType="{x:Type TextBlock}">
                             <Setter Property="HorizontalAlignment" Value="Right" />
+                            <Setter Property="Margin" Value="4"/>
                         </Style>
                     </DataGridTextColumn.ElementStyle>
                 </DataGridTextColumn>
