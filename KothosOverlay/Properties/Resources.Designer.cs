@@ -61,12 +61,12 @@ namespace KothosOverlay.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        ///   Looks up a localized resource of type System.Byte[].
         /// </summary>
-        internal static System.Drawing.Bitmap Okh_Img_Stream {
+        internal static byte[] Roboto_Regular {
             get {
-                object obj = ResourceManager.GetObject("Okh_Img_Stream", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
+                object obj = ResourceManager.GetObject("Roboto_Regular", resourceCulture);
+                return ((byte[])(obj));
             }
         }
     }

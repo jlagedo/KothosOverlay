@@ -18,9 +18,17 @@ namespace KothosOverlay.ConsoleTest
 
             while (true)
             {
-                for (int i = 0; i < 1000; i++)
+                for (int i = 1000; i < 10000; i++)
                 {
-                    kothosMainACT.UpdatePlayerData("Kothos", i);
+                    kothosMainACT.UpdatePlayerData("Raziel Jone", 5086.85 + i,      "16%", "33.2%", "34.1%", "13.2%");
+                    kothosMainACT.UpdatePlayerData("Lucifer Morningstar", 4961 + i, "15%", "14.2%", "34.1%", "13.2%");
+                    kothosMainACT.UpdatePlayerData("Matt Ishida", 4713.85 + i,      "15%", "33.2%", "34.1%", "13.2%");
+                    kothosMainACT.UpdatePlayerData("Lulu Mizuki", 4395.85 + i,      "14%", "33.2%", "34.1%", "13.2%");
+                    kothosMainACT.UpdatePlayerData("YOU", 3875.85 + i,              "12%", "33.2%", "34.1%", "13.2%");
+                    kothosMainACT.UpdatePlayerData("Alkeid Yashiro", 3850.85 + i,   "12%", "33.2%", "34.1%", "13.2%");
+                    kothosMainACT.UpdatePlayerData("Leon Lanceloth", 2167.85 + i,   "6%",  "33.2%", "34.1%", "13.2%");
+                    kothosMainACT.UpdatePlayerData("Aeria Moon", 1978.85 + i,       "6%",  "33.2%", "34.1%", "13.2%");
+
                     Thread.Sleep(100);
                 }
 

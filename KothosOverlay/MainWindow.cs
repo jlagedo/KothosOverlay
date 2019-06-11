@@ -25,11 +25,12 @@ namespace KothosOverlay
 
         private void InitializeComponents()
         {
-            Height = 600;
-            Width = 800;
+            Height = 332;
+            Width = 500;
             AllowsTransparency = true;
             WindowStyle = WindowStyle.None;
             ResizeMode = ResizeMode.CanResizeWithGrip;
+            Background = new SolidColorBrush { Opacity = 0 };
 
             MouseDown += MainWindow_MouseDown;
 

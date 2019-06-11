@@ -65,7 +65,7 @@ namespace KothosOverlay
 
                 foreach (KeyValuePair<string, CombatantData> item in items)
                 {
-                    UpdatePlayerData(item.Value.Name, item.Value.DPS);
+                    UpdatePlayerData(item.Value.Name, item.Value.DPS, "16%", "33.2%", "34.1%", "13.2%");
                     string debugStr = item.Value.Name + " - " + item.Value.DPS + " - " + item.Value.EncDPS;
                     UpdateText(debugStr);
                 }
@@ -122,7 +122,7 @@ namespace KothosOverlay
             //Main.Dispatcher.BeginInvoke(DispatcherPriority.Normal, new NextPrimeDelegate(Test), "params");
         }
 
-        public void UpdatePlayerData(string name, double dps)
+        public void UpdatePlayerData(string name, double dps, string dpsEnc, string criticalEnc, string directEnc, string directCritEnc)
         {
             Main.Dispatcher.InvokeAsync(() =>
             {
@@ -135,8 +135,11 @@ namespace KothosOverlay
                     };
                     Main.OverlayModel.Players.Add(pm);
                 }
-
+                pm.DPSEnc = dpsEnc;
                 pm.DPS = dps;
+                pm.CriticalEnc = criticalEnc;
+                pm.DirectEnc = directEnc;
+                pm.DirectCritEnc = directCritEnc;               
 
             });
         }

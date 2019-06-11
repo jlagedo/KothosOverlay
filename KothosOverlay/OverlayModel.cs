@@ -35,8 +35,12 @@ namespace KothosOverlay
     public class PlayerModel : INotifyPropertyChanged
     {
         private string _name;
-
         private double _dps;
+
+        private string _dpsEnc;
+        private string _criticalEnc;
+        private string _directEnc;
+        private string _directCritEnc;
 
         public string Name
         {
@@ -54,7 +58,42 @@ namespace KothosOverlay
             {
                 _dps = value; NotifyPropertyChanged("DPS");
             }
+        }
 
+        public string DPSEnc
+        {
+            get => _dpsEnc;
+            set
+            {
+                _dpsEnc = value; NotifyPropertyChanged("DPSEnc");
+            }
+        }
+
+        public string CriticalEnc
+        {
+            get => _criticalEnc;
+            set
+            {
+                _criticalEnc = value; NotifyPropertyChanged("CriticalEnc");
+            }
+        }
+
+        public string DirectEnc
+        {
+            get => _directEnc;
+            set
+            {
+                _directEnc = value; NotifyPropertyChanged("DirectEnc");
+            }
+        }
+
+        public string DirectCritEnc
+        {
+            get => _directCritEnc;
+            set
+            {
+                _directCritEnc = value; NotifyPropertyChanged("DirectCritEnc");
+            }
         }
 
         public event PropertyChangedEventHandler PropertyChanged;
